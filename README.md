@@ -1,46 +1,51 @@
 # Climate Policy and Housing Prices
 
-**Applied econometrics project conducted with Forvis Mazars**
+**Applied econometrics project conducted with Forvis Mazars — ENSAE Paris**
 
-This project studies the relationship between the French **Climate and Resilience Law** and residential property prices, with a particular focus on the role of buildings' energy performance.
-
-The project was carried out as part of the ENSAE *Statistique appliquée* project and combines large-scale French housing transaction data with energy-performance information.
+This project studies how the **French Climate and Resilience Law (2021)** affected the valuation of energy-inefficient housing. It combines property transactions from **DVF (Demandes de valeurs foncières)** with **DPE (Diagnostic de performance énergétique)** data.
 
 ## Research question
 
-The analysis investigates whether the regulatory changes associated with the Climate and Resilience Law affected the valuation of energy-inefficient housing and whether price dynamics differed across energy-performance categories.
+Did the introduction of restrictions targeting energy-inefficient dwellings change their transaction prices relative to more energy-efficient properties?
+
+The empirical analysis defines treatment groups from DPE ratings and compares price dynamics before and after the policy date using **Difference-in-Differences** specifications.
+
+## Empirical workflow
+
+The project required:
+
+- cleaning and harmonising large DVF and DPE datasets;
+- normalising addresses and matching property transactions to energy-performance records;
+- analysing the distribution of DPE ratings before and after matching;
+- constructing treatment, control and post-policy indicators;
+- estimating hedonic price regressions and Difference-in-Differences models;
+- adding property and geographic controls and performing robustness analyses.
+
+## Main notebooks
+
+The repository preserves the notebooks from the collaborative research workflow. The most useful entry points are:
+
+- **`prep_donnees.ipynb`** — preparation and harmonisation of DPE and property-transaction data;
+- **`matching2.ipynb`** — address normalisation and DVF–DPE matching;
+- **`analyse_données_initiales.ipynb`** — exploratory analysis of the source data;
+- **`modelisation4.ipynb`** — construction of treatment/control groups and main econometric analysis.
+
+Other notebooks are retained as intermediate collaborative work and robustness explorations.
 
 ## Data
 
-The empirical work combines several sources, including:
+The repository includes matched annual extracts used by the notebooks. The underlying public sources are:
 
-- **DVF (Demandes de valeurs foncières)** property transaction data;
-- **DPE (Diagnostic de performance énergétique)** information;
-- geographic and property-level variables used for matching and controls.
+- **DVF** — French property transactions;
+- **DPE** — energy-performance certificates.
 
-The repository contains intermediate datasets and notebooks used for data preparation, matching, exploratory analysis and econometric modelling.
+Some data-preparation notebooks were originally run in an ENSAE data environment and therefore contain environment-specific paths or S3 access code. The final matched extracts included here allow the modelling notebooks to document the empirical analysis without access to that environment.
 
-## Empirical approach
+## Tools and methods
 
-The project includes:
-
-- cleaning and harmonising large property-level datasets;
-- matching housing transactions with energy-performance information;
-- descriptive analysis of prices and DPE categories;
-- construction of treatment and comparison groups;
-- Difference-in-Differences specifications and robustness analyses.
-
-## Repository contents
-
-The notebooks document the successive stages of the empirical workflow, from raw-data preparation and matching to the final econometric analysis.
-
-Because this repository originates from a collaborative academic project, some intermediate notebooks retain working-file names. The main analytical content is contained in the data-preparation, matching and modelling notebooks.
-
-## Tools
-
-Python · pandas · Jupyter · econometrics · causal inference
+Python · pandas · statsmodels · Jupyter · data matching · hedonic regressions · Difference-in-Differences
 
 ## Context
 
-ENSAE Paris — Applied Statistics Project  
+ENSAE Paris — *Statistique appliquée*  
 Partner: **Forvis Mazars**
