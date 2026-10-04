@@ -25,10 +25,10 @@ The project required:
 
 The repository preserves the notebooks from the collaborative research workflow. The most useful entry points are:
 
-- **`prep_donnees.ipynb`** — preparation and harmonisation of DPE and property-transaction data;
-- **`matching2.ipynb`** — address normalisation and DVF–DPE matching;
-- **`analyse_données_initiales.ipynb`** — exploratory analysis of the source data;
-- **`modelisation4.ipynb`** — construction of treatment/control groups and main econometric analysis.
+- **`01_data_preparation.ipynb`** — preparation and harmonisation of DPE and property-transaction data;
+- **`02_dvf_dpe_matching.ipynb`** — address normalisation and DVF–DPE matching;
+- **`03_exploratory_analysis.ipynb`** — exploratory analysis of the source data;
+- **`04_econometric_analysis.ipynb`** — construction of treatment/control groups and main econometric analysis.
 
 Other notebooks are retained as intermediate collaborative work and robustness explorations.
 
