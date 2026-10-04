@@ -8,7 +8,7 @@ This project studies how the **French Climate and Resilience Law (2021)** affect
 
 Did the introduction of restrictions targeting energy-inefficient dwellings change their transaction prices relative to more energy-efficient properties?
 
-The empirical analysis defines treatment groups from DPE ratings and compares price dynamics before and after the policy date using **Difference-in-Differences** specifications.
+The empirical analysis defines treatment groups from DPE ratings and compares price dynamics before and after **24 August 2021** using **Difference-in-Differences** specifications. In the main saved specification, dwellings rated **E, F or G** are assigned to the treated group and ratings **A–D** to the comparison group.
 
 ## Empirical workflow
 
